@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فاطمة عبدالصمد | الصفحة الشخصية</title>
+    <title>Fatima Abdulsamad | الصفحة الشخصية</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     
@@ -20,20 +20,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* خلفية متدرجة بألوان مريحة وفخمة */
-            background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+            /* خلفية متدرجة بألوان بناتية (وردي وأرجواني ناعم) */
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffd1ff);
             overflow: hidden;
-            color: white;
+            color: #4a4a4a; /* تغيير لون النص الأساسي ليتناسب مع الخلفية الفاتحة */
         }
 
         .container {
             text-align: center;
             padding: 50px;
-            background: rgba(255, 255, 255, 0.05);
+            /* زجاج أبيض شفاف ليتناسب مع الألوان الفاتحة */
+            background: rgba(255, 255, 255, 0.4); 
             backdrop-filter: blur(15px); /* تأثير الزجاج */
             border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* ظل أنعم */
             animation: fadeIn 1.5s ease-in-out;
         }
 
@@ -41,27 +42,34 @@
             font-size: 3.5rem;
             font-weight: 900;
             margin-bottom: 10px;
-            background: linear-gradient(to right, #fff, #bdc3c7);
+            /* تدرج لوني للاسم (وردي غامق إلى ذهبي ناعم) */
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: 2px;
+            letter-spacing: 1px; /* تقليل التباعد قليلاً ليتناسب مع الاسم الإنجليزي */
         }
 
         .dev-tag {
             font-size: 1.2rem;
-            color: #00d2ff;
+            color: #ff6b6b; /* لون وردي واضح وجميل */
             text-transform: uppercase;
             letter-spacing: 3px;
             margin-bottom: 20px;
             display: block;
+            font-weight: 700;
         }
 
         .line {
-            width: 50px;
+            width: 60px; /* زيادة العرض قليلاً */
             height: 4px;
-            background: #00d2ff;
+            background: #ff6b6b; /* نفس لون الـ dev-tag */
             margin: 20px auto;
             border-radius: 2px;
+        }
+
+        p {
+            color: #666; /* لون نص الفقرة */
+            font-weight: 400;
         }
 
         @keyframes fadeIn {
@@ -71,7 +79,7 @@
 
         /* لمسة بسيطة للموبايل */
         @media (max-width: 600px) {
-            h1 { font-size: 2.2rem; }
+            h1 { font-size: 2.5rem; } /* تكبير قليلاً للموبايل */
             .container { width: 90%; padding: 30px; }
         }
     </style>
@@ -80,10 +88,11 @@
 
     <div class="container">
         <span class="dev-tag">مرحباً بكم في موقع</span>
-        <h1>فاطمة عبدالصمد</h1>
+        <h1>Fatima Abdulsamad</h1>
         <div class="line"></div>
         <p>مصممة ومطورة واجهات ويب طموحة</p>
     </div>
 
 </body>
 </html>
+
