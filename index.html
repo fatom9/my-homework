@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fatima Abd Alsamad | الصفحة الشخصية</title>
+    <title>Fatima Abdulsamad | Portfolio</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -15,84 +15,112 @@
         }
 
         body {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Poppins', sans-serif;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            /* خلفية متدرجة بألوان بناتية (وردي وأرجواني ناعم) */
-            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffd1ff);
+            background-color: #000000; /* Deep Black Background */
             overflow: hidden;
-            color: #4a4a4a; /* تغيير لون النص الأساسي ليتناسب مع الخلفية الفاتحة */
         }
 
+        /* Modern Container with Pink Glow */
         .container {
             text-align: center;
-            padding: 50px;
-            /* زجاج أبيض شفاف ليتناسب مع الألوان الفاتحة */
-            background: rgba(255, 255, 255, 0.4); 
-            backdrop-filter: blur(15px); /* تأثير الزجاج */
-            border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* ظل أنعم */
-            animation: fadeIn 1.5s ease-in-out;
+            padding: 70px 50px;
+            background: #ffffff; /* Clean White Card */
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(255, 105, 180, 0.2); /* Soft Pink Shadow */
+            position: relative;
+            animation: slideUp 1.2s ease-out;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: #ff2d75; /* Hot Pink Accent Line */
+            border-radius: 20px 20px 0 0;
+        }
+
+        .welcome-text {
+            font-size: 0.8rem;
+            color: #ff2d75; /* Bold Pink */
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            display: block;
+            font-weight: 600;
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 900;
-            margin-bottom: 10px;
-            /* تدرج لوني للاسم (وردي غامق إلى ذهبي ناعم) */
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 1px; /* تقليل التباعد قليلاً ليتناسب مع الاسم الإنجليزي */
-        }
-
-        .dev-tag {
-            font-size: 1.2rem;
-            color: #ff6b6b; /* لون وردي واضح وجميل */
-            text-transform: uppercase;
-            letter-spacing: 3px;
+            color: #1a1a1a; /* Dark Black/Grey */
+            line-height: 1.1;
             margin-bottom: 20px;
-            display: block;
-            font-weight: 700;
         }
 
         .line {
-            width: 60px; /* زيادة العرض قليلاً */
-            height: 4px;
-            background: #ff6b6b; /* نفس لون الـ dev-tag */
+            width: 40px;
+            height: 5px;
+            background: #1a1a1a;
             margin: 20px auto;
-            border-radius: 2px;
         }
 
         p {
-            color: #666; /* لون نص الفقرة */
-            font-weight: 400;
+            color: #666;
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.6;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+        .btn {
+            margin-top: 30px;
+            padding: 12px 35px;
+            background: #1a1a1a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            border: 2px solid #1a1a1a;
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: #ff2d75;
+            border-color: #ff2d75;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* لمسة بسيطة للموبايل */
+        /* Mobile Responsive */
         @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; } /* تكبير قليلاً للموبايل */
-            .container { width: 90%; padding: 30px; }
+            h1 { font-size: 2.2rem; }
+            .container { padding: 50px 30px; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <span class="dev-tag">مرحباً بكم في موقع</span>
+        <span class="welcome-text">Hello, I am</span>
         <h1>Fatima Abdulsamad</h1>
         <div class="line"></div>
-        <p>مصممة ومطورة واجهات ويب طموحة</p>
+        <p>Creative Web Designer & Front-end Developer focused on crafting beautiful digital experiences.</p>
+        <a href="#" class="btn">View My Work</a>
     </div>
 
 </body>
 </html>
-
